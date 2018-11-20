@@ -55,7 +55,7 @@ public class LocalStorageProvider extends DocumentsProvider {
     @Override
     public Cursor queryRoots(final String[] projection) throws FileNotFoundException {
         // Create a cursor with either the requested fields, or the default
-        // projection if "projection" is null.
+        // projection if "projection" is null.ddd
         final MatrixCursor result = new MatrixCursor(projection != null ? projection
                 : DEFAULT_ROOT_PROJECTION);
         // Add Home directory
