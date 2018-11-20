@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@drawable/ic_cloud_upload"
+            android:title="Upload Documents" />
+        <item
+            android:id="@+id/nav_your_doc"
+            android:icon="@drawable/ic_image_black_24dp"
+            android:title="Your Documents" />
+        <item
+            android:id="@+id/nav_completed_doc"
+            android:icon="@drawable/ic_check_box_black_24dp"
+            android:title="Completed Documents" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_enquiry"
+                android:icon="@drawable/ic_help_black_24dp"
+                android:title="Enquiry" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Help" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Aksharafinserv</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+    <string name="string_internet_connection_not_available">Internet Connection Not Available</string>
+    <string name="string_some_thing_wrong">Something went wrong.</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="chooser_title">Choose Files</string>
+    <string name="welcome_txt">We provide all the financial consulting services to the clients, ranging from basic book keeping works to providing MIS solutions and beyond, through excellent qualified personnel, applying high standard working systems.
+
+
+    To become a nationwide consulting service provider rendering innovative solutions day in and day out ensuring clients organizational productivity in the current Challenging global business environments, by creating new benchmarks in the industry and playing our part in development of nation all the way through the journey.</string>
+</resources>
