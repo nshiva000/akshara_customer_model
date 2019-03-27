@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "638946282248",
+    "firebase_url": "https://aksharafinserve.firebaseio.com",
+    "project_id": "aksharafinserve",
+    "storage_bucket": "aksharafinserve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638946282248:android:d779a7f41d277856",
+        "android_client_info": {
+          "package_name": "com.gmail.aksharafinserve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638946282248-2odv7e8upr3jgk2nh2nbnogr8qe2so30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmail.aksharafinserve",
+            "certificate_hash": "64479384018b928fa39ca46a78ff66b2934c7cb8"
+          }
+        },
+        {
+          "client_id": "638946282248-n8hti5lhuelia3baenhcsamdlpu6470a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3gn6fNjLdHAp2ownREUd5TYUU7siHMeg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638946282248-n8hti5lhuelia3baenhcsamdlpu6470a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

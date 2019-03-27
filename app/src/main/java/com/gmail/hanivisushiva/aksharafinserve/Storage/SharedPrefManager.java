@@ -2,6 +2,7 @@ package com.gmail.hanivisushiva.aksharafinserve.Storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.gmail.hanivisushiva.aksharafinserve.Models.Login.Data;
 
@@ -25,6 +26,22 @@ public class SharedPrefManager {
 
         }
         return mInstance;
+    }
+
+
+    //this method will save the device token to shared preferences
+    public boolean saveDeviceToken(String token){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("token", token);
+        editor.apply();
+        return true;
+    }
+
+    //this method will fetch the device token from shared preferences
+    public String getDeviceToken(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return  sharedPreferences.getString("token", null);
     }
 
     public void saveUser(Data loginData){
@@ -56,22 +73,12 @@ public class SharedPrefManager {
         editor.putString("eotpver",loginData.getEotpver());
         editor.putBoolean("login_status",true);
 
-       /* editor.putString("sid",login.getData().getAdmissionsId());
-        editor.putString("id",login.getData().getId());
-        editor.putString("name",login.getData().getName());
-        editor.putString("mobile",login.getData().getMobile());
-        editor.putString("image",login.getData().getPic());
-        editor.putString("batch",login.getData().getBatch());
-        editor.putBoolean("status",login.getSuccess());
-        editor.putString("password",login.getData().getPassword());
-        editor.putString("email",login.getData().getEmail());
-
-        */
 
         editor.apply();
         editor.commit();
 
     }
+
 
 
     public boolean isLoggedIn(){
@@ -141,9 +148,14 @@ public class SharedPrefManager {
     */
 
     public void clear(){
+        String store_token = getDeviceToken();
+        String name = getName();
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
+        saveDeviceToken(store_token);
+        Log.e("name",name);
+        Log.e("name",store_token);
     }
 }

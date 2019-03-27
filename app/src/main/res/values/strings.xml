@@ -1,5 +1,29 @@
 <resources>
+
+
     <string name="app_name">Aksharafinserv</string>
+
+
+    <string name="make_an_order">Make an order</string>
+    <string name="dialog_title">Select Process</string>
+    <string name="ok_label">OK</string>
+    <string name="dismiss_label">Dismiss</string>
+    <string name="clear_all_label">Clear all</string>
+
+    <string-array name="shopping_item">
+        <item>Onion</item>
+        <item>Sausage</item>
+        <item>Milk</item>
+        <item>Garlic</item>
+        <item>Beef</item>
+        <item>Veggies</item>
+        <item>Olive</item>
+        <item>Cheese</item>
+        <item>Tuna</item>
+        <item>Mushrooms</item>
+    </string-array>
+
+
     <string name="title_activity_welcome">Welcome</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.gmail.hanivisushiva.aksharafinserve">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,8 +15,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,14 +26,62 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".Welcome"
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Pages.Upload" />
-        <activity android:name=".Pages.Profile" />
-        <activity android:name=".Pages.YourDocuments" />
-        <activity android:name=".Pages.CompletedDocuments" />
-        <activity android:name=".Pages.Enquiry" />
+        <activity android:name=".Pages.Customer.Upload"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Profile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Customer.YourDocuments"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Customer.CompletedDocuments"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Customer.Enquiry"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminDocumentsManager"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AssignDoc"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.EmployeeAssignDoc"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AddNewUser"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AddNewEmployee"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminUploadFinishedDocs"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.EmployeDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.UserDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminSendUserMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminPhoneMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminCompletdDocumnetsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Employee.EmployeUploadFinishDocActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Employee.EmployeAssignDocActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Employee.EmployeCompletedActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Employee.EmployeMsgUserActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Employee.EmployeUpdateAssignDocActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminLatestUpdatesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Pages.Admin.AdminEnquiryActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

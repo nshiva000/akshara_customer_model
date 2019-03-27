@@ -18,8 +18,119 @@
             android:title="Your Documents" />
         <item
             android:id="@+id/nav_completed_doc"
-            android:icon="@drawable/ic_check_box_black_24dp"
+            android:icon="@drawable/ic_finished_doc_in_black_24dp"
             android:title="Completed Documents" />
+
+        <item
+            android:id="@+id/nav_custom_doc"
+            android:icon="@drawable/ic_image_black_24dp"
+            android:visible="false"
+            android:title="Custom Documents" />
+
+        <item
+            android:id="@+id/nav_add_new_user"
+            android:icon="@drawable/ic_person_add"
+            android:visible="false"
+            android:title="Add new User" />
+
+        <item
+            android:id="@+id/nav_add_new_employee"
+            android:icon="@drawable/ic_person_add"
+            android:visible="false"
+            android:title="Add new Employee" />
+        <item
+            android:id="@+id/nav_assign_doc"
+            android:icon="@drawable/ic_image_black_24dp"
+            android:visible="false"
+            android:title="Custom Documents" />
+        <item
+            android:id="@+id/nav_admin_upload_finish_documents"
+            android:visible="false"
+            android:icon="@drawable/ic_cloud_upload"
+            android:title="Upload Finished Documents" />
+
+
+        <item
+            android:id="@+id/nav_admin_completed_documents"
+            android:icon="@drawable/ic_finished_doc_in_black_24dp"
+            android:visible="false"
+            android:title="Completed Documents" />
+
+        <item
+            android:id="@+id/nav_admin_user_data"
+            android:icon="@drawable/ic_insert_drive_file_black_24dp"
+            android:visible="false"
+            android:title="User Data" />
+
+        <item
+            android:id="@+id/nav_admin_employee_data"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:visible="false"
+            android:title="Employee Data" />
+
+        <item
+            android:id="@+id/nav_admin_msg_user"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:visible="false"
+            android:title="Message User" />
+
+        <item
+            android:id="@+id/nav_admin_phone_msg"
+            android:icon="@drawable/ic_phone_black_24dp"
+            android:visible="false"
+            android:title="Phone Message" />
+
+        <item
+            android:id="@+id/nav_admin_email_msg"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:visible="false"
+            android:title="Email Message" />
+
+        <item
+            android:id="@+id/nav_latest_updates"
+            android:icon="@drawable/ic_update_black_24dp"
+            android:visible="false"
+            android:title="Latest Updates" />
+
+        <item
+            android:id="@+id/nav_admin_enquiry"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:visible="false"
+            android:title="Enquiries" />
+
+
+
+
+
+
+
+
+        <item
+            android:id="@+id/nav_employee_assigned_doc"
+            android:icon="@drawable/ic_image_black_24dp"
+            android:visible="false"
+            android:title="Your Documents" />
+        <item
+            android:id="@+id/nav_employee_upload"
+            android:icon="@drawable/ic_cloud_upload"
+            android:visible="false"
+            android:title="Upload Finished Documents" />
+        <item
+            android:id="@+id/nav_employee_completed_doc"
+            android:icon="@drawable/ic_finished_doc_in_black_24dp"
+            android:visible="false"
+            android:title="Completed Documents" />
+        <item
+            android:id="@+id/nav_employee_email_msg"
+            android:icon="@drawable/ic_email_black_24dp"
+            android:visible="false"
+            android:title="Message To User" />
+
+        <item
+            android:id="@+id/nav_employee_enquiry"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:visible="false"
+            android:title="Enquiries" />
     </group>
 
     <item android:title="Communicate">
