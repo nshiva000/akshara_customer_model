@@ -109,7 +109,7 @@ public class SharedPrefManager {
 
     public String getImage(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
-        return sharedPreferences.getString("image","");
+        return sharedPreferences.getString("image",null);
 
     }
 

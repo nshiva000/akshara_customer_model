@@ -55,6 +55,7 @@ import retrofit2.Response;
 public class Upload extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+    private ArrayList<Uri> arrayList = new ArrayList<>();
     private static final int REQUEST_CODE = 6384;
     private static final int REQUEST_CODE_ASK_PERMISSIONS = 124;
 
@@ -69,7 +70,7 @@ public class Upload extends AppCompatActivity {
 
     private String rid;
 
-    private ArrayList<Uri> arrayList = new ArrayList<>();
+
     MyAdapter mAdapter;
 
     @Override

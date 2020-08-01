@@ -1,8 +1,12 @@
 package com.gmail.hanivisushiva.aksharafinserve;
 
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.CipherSuite;
+import okhttp3.ConnectionSpec;
 import okhttp3.OkHttpClient;
+import okhttp3.TlsVersion;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -17,11 +21,16 @@ public class RetrofitClient {
     private static  RetrofitClient mInstance;
     private Retrofit retrofit;
 
+
     OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
             .connectTimeout(160, TimeUnit.SECONDS)
             .readTimeout(160, TimeUnit.SECONDS)
             .writeTimeout(160, TimeUnit.SECONDS)
             .build();
+
+
+
+          //httpClient.connectionSpecs(Collections.singletonList(spec))
 
     private RetrofitClient(){
         retrofit = new Retrofit.Builder()

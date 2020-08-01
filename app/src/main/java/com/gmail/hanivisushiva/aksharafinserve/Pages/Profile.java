@@ -7,11 +7,15 @@ import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gmail.hanivisushiva.aksharafinserve.R;
 import com.gmail.hanivisushiva.aksharafinserve.Storage.SharedPrefManager;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class Profile extends AppCompatActivity {
 
@@ -20,6 +24,7 @@ public class Profile extends AppCompatActivity {
 
     TextView role_e,image_e,name_e,email_e,contact_e,mobile_e;
     CardView cardView;
+    CircleImageView profile_img;
 
 
     @Override
@@ -41,6 +46,8 @@ public class Profile extends AppCompatActivity {
         name_e = findViewById(R.id.user_name);
         email_e = findViewById(R.id.email);
         contact_e = findViewById(R.id.admission);
+        profile_img = findViewById(R.id.profile_img);
+
 
 
 
@@ -51,6 +58,15 @@ public class Profile extends AppCompatActivity {
         mobile = SharedPrefManager.get_mInstance(getApplicationContext()).getMobile();
         contact_person = SharedPrefManager.get_mInstance(getApplicationContext()).getContactPerson();
 
+        if (image != null){
+            if (!image.isEmpty()){
+                Picasso.get().load(image).into(profile_img);
+            }else {
+                Picasso.get().load(R.drawable.logo).into(profile_img);
+            }
+        }else {
+            Picasso.get().load(R.drawable.logo).into(profile_img);
+        }
 
         if (role.equals("employee")){
             cardView.setVisibility(View.GONE);

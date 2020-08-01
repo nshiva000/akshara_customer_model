@@ -18,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,7 +45,9 @@ import com.gmail.hanivisushiva.aksharafinserve.Pages.Customer.Upload;
 import com.gmail.hanivisushiva.aksharafinserve.Pages.Admin.UserDataActivity;
 import com.gmail.hanivisushiva.aksharafinserve.Pages.Customer.YourDocuments;
 import com.gmail.hanivisushiva.aksharafinserve.Storage.SharedPrefManager;
+import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,6 +57,7 @@ public class Welcome extends AppCompatActivity
 
     TextView u_name,u_email;
     String role;
+    CircleImageView imageView;
 
 
     @Override
@@ -101,15 +105,25 @@ public class Welcome extends AppCompatActivity
 
         u_name = header.findViewById(R.id.u_name);
         u_email = header.findViewById(R.id.u_email);
+        imageView = header.findViewById(R.id.imageView);
+
+        //imageView
 
         u_name.setText(SharedPrefManager.get_mInstance(getApplicationContext()).getName());
         u_email.setText(SharedPrefManager.get_mInstance(getApplicationContext()).getEmail());
 
+        if (SharedPrefManager.get_mInstance(getApplicationContext()).getImage() != null){
+            if (SharedPrefManager.get_mInstance(getApplicationContext()).getImage().isEmpty()){
+                Picasso.get().load(R.drawable.logo).into(imageView);
+            }else{
+                Picasso.get().load(SharedPrefManager.get_mInstance(getApplicationContext()).getImage()).into(imageView);
+            }
+        }else {
+            Picasso.get().load(R.drawable.logo).into(imageView);
+        }
+
+
         Log.e("rid",SharedPrefManager.get_mInstance(getApplicationContext()).getRid()+"--");
-
-
-
-
 
 
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -197,7 +211,11 @@ public class Welcome extends AppCompatActivity
 
             @Override
             public void onFailure(Call<SendTokenModel> call, Throwable t) {
-
+                SharedPrefManager.get_mInstance(getApplicationContext()).clear();
+                Intent intent = new Intent(Welcome.this,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
         });
     }

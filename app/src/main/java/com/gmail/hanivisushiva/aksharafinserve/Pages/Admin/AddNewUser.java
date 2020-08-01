@@ -55,20 +55,22 @@ public class AddNewUser extends AppCompatActivity {
     private static final int REQUEST_CODE = 6384;
     private static final int REQUEST_CODE_ASK_PERMISSIONS = 124;
 
-    Button btnChoose,mOrder,submit;
+
     private MultipartBody.Part multi_part_file;
-    private Uri imageUri;
+
     TextView mItemSelected;
     String[] listItems;
     boolean[] checkedItems;
     ArrayList<Integer> mUserItems = new ArrayList<>();
     HashMap<String,String> stringDatumHashMap = new HashMap<>();
+    Button btnChoose,mOrder,submit;
+    ArrayList<String> items = new ArrayList<>();
 
 
     private RadioGroup radioSexGroup;
     private RadioButton radioSexButton;
 
-
+    private Uri imageUri;
     ImageView imageView;
 
     EditText name,email,password,phone,contact_person,message,others;
@@ -76,7 +78,7 @@ public class AddNewUser extends AppCompatActivity {
 
     String name_txt,email_txt,password_txt,phone_txt,contact_person_txt,message_txt,agreement_txt,services_txt,others_txt;
 
-    ArrayList<String> items = new ArrayList<>();
+
 
     RequestBody others_r,name_r,email_r,password_r,phone_r,person_r,message_r,agreement_r,services_r;
 
